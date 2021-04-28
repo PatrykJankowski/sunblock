@@ -1,0 +1,59 @@
+/* Spacing */
+$xs: 10px;
+$s: 20px;
+$m: 40px;
+$l: 60px;
+$xl: 80px;
+$xxl: 100px;
+
+$margin-small: $xs;
+$margin: $s;
+$margin-big: $m;
+
+/* Sizes */
+$navigation-height: 90px;
+$navigation-height-mobile: 90px;
+
+/* Colors */
+$blue: #007FFF;
+$gray: #FBFBFB;
+$white: #fff;
+
+$primary: $blue;
+$secondary: #28afb0;
+$tertiary: $gray;
+
+//$header-color: $tertiary;
+//$text-main-color: #3A3B3C;
+$text-main-color: #1A2938;
+
+/* Fonts */
+$text-size: 1rem;
+$h1-size: 64px;
+$h2-size: 42px;
+$h3-size: 30px;
+$h4-size: 22px;
+$h5-size: 18px;
+
+/* Resolutions */
+$desktop: 1024px;
+$tablet: 768px;
+
+
+// Mixins
+@mixin for-size($size) {
+    @if $size == tablet {
+        @media (min-width: 768px) { @content; }
+    } @else if $size == tablet-landscape {
+        @media (min-width: 992px) { @content; }
+    } @else if $size == desktop {
+        @media (min-width: 1200px) { @content; }
+    } @else if $size == desktop-wide {
+        @media (min-width: 1921px) { @content; }
+    }
+}
+
+@mixin font-size($fontSize) {
+    font-size: ($fontSize / 16) + rem;
+}
+

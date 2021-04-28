@@ -1,0 +1,56 @@
+.footer {
+  padding: 80px 0 20px;
+  background-color: #192937;
+  color: #fff;
+
+  @include for-size(tablet) {
+    padding: 80px 0;
+  }
+
+  &__logo {
+    max-width: 270px;
+    margin-bottom: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+
+    @include for-size(tablet) {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__contact-info {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  &__icon {
+    display: inline-flex;
+    margin-right: 20px;
+    width: 30px;
+    max-height: 30px;
+  }
+
+  &__social {
+    svg {
+      width: 30px;
+    }
+
+    a {
+      display: inline-flex;
+
+      &:last-of-type svg {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+    }
+  }
+}

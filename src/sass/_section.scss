@@ -1,0 +1,20 @@
+.section {
+  padding: $xl 0;
+
+  @include for-size(desktop) {
+    padding: $xxl 0;
+  }
+
+  &--bg {
+    background: #1A2938;
+    color: #fff;
+  }
+
+  &--bg-secondary {
+    background-color: #E2E2E2;
+  }
+
+  &--pb-none {
+    padding-bottom: 0;
+  }
+}
