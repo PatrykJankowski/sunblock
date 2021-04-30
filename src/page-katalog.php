@@ -10,53 +10,45 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-3 catalog__menu">
+                <div class="col-md-4 catalog__menu">
                     <h4>Nasze produkty</h4>
                     <?php wp_nav_menu(array('theme_location' => 'catalog-menu', 'container' => false)); ?>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <h3>Katalog produktów</h3>
                     <p>Zapoznaj się z naszymi produktami</p>
 
-                    <?php
-                    $paged = (get_query_var( 'paged' )) ? get_query_var( 'paged' ) : 1;
-                    $args = array(
-                        'post_type' => 'post',
-                        'post_status' => 'publish',
-                        'category_name' => 'realizacje',
-                        'posts_per_page' => 32,
-                        'paged' => $paged,
-                    );
-                    $arr_posts = new WP_Query( $args );
+                    <div class="catalog__categories">
 
-                    if ( $arr_posts->have_posts() ) :
+                        <a href="/zaluzje" class="catalog__img-wrapper">
+                            <h3 class="catalog__desc">Żaluzje</h3>
+                            <img src="/wp-content/themes/sunblock/img/zaluzje.webp" alt="" loading="lazy"">
+                        </a>
 
+                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=141" class="catalog__img-wrapper">
+                            <h3 class="catalog__desc">Rolety</h3>
+                            <img src="/wp-content/themes/sunblock/img/rolety.webp" alt="" loading="lazy"">
+                        </a>
 
-                        while ( $arr_posts->have_posts() ) :
+                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=138" class="catalog__img-wrapper">
+                            <h3 class="catalog__desc">Moskitiery</h3>
+                            <img src="/wp-content/themes/sunblock/img/moskitiery.webp" alt="" loading="lazy"">
+                        </a>
 
-                            $arr_posts->the_post();
-                    ?>
+                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=136" class="catalog__img-wrapper">
+                            <h3 class="catalog__desc">Karnisze</h3>
+                            <img src="/wp-content/themes/sunblock/img/karnisze.webp" alt="" loading="lazy"">
+                        </a>
 
-                    <a class="catalog__img-wrapper">
-                        <h4 class="catalog__desc">Żaluzje</h4>
-                        <?php
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail();
-                            }
-                        ?>
-                    </a>
-
-                   <?php
-
-                        endwhile;
-
-                    endif;
-                    ?>
+                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=134" class="catalog__img-wrapper" style="width: 50%">
+                            <h3 class="catalog__desc">Akcesoria</h3>
+                            <img src="/wp-content/themes/sunblock/img/akcesoria.webp" alt="" loading="lazy"">
+                        </a>
+                    </div>
                 </div>
+
             </div>
-
-
         </div>
     </section>
 

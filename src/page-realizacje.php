@@ -16,15 +16,19 @@
 
 
     <div class="subpage-top__wrapper">
-        <section class="subpage-top"></section>
+        <section class="section section--pn">
+            <h1><?php the_title(); ?></h1>
+            <div class="subpage-top"></div>
+        </section>
     </div>
 
     <section class="realizacje">
         <div class="container">
 
             <div class="row realizacje__menu-wrapper">
-                <div class="col-md-6"><a href="/realziacje/prywatne" class="realizacje__menu">Pomieszczenia prywatne</a></div>
-                <div class="col-md-6"><a href="/realziacje/uslugowe" class="realizacje__menu">Pomieszczenia usługowe</a></div>
+                <div class="col-md-4"><a href="#" class="realizacje__menu button button--filled-dark">Wszystkie</a></div>
+                <div class="col-md-4"><a href="/realizacje/prywatne" class="realizacje__menu button button--dark">Pomieszczenia prywatne</a></div>
+                <div class="col-md-4"><a href="/realizacje/uslugowe" class="realizacje__menu button button--dark">Pomieszczenia usługowe</a></div>
             </div>
 
             <div class="realizacje__photos">
@@ -34,22 +38,18 @@
                     $counter = 1;
 
                     while ($posts->have_posts()):
-
                         $postName = get_post_field('post_name');
 
                         if($counter == 1 or !($counter % 5)) { ?>
-
                             <div class="row">
-
                         <?php }
-                            $posts->the_post();
-                        ?>
+
+                        $posts->the_post(); ?>
 
                         <div class="col-md-3">
-                            <a onclick="openModal('<?php echo $postName ?>'); currentSlide(<?php echo $counter; ?>)" class="hover-shadow">
+                            <a onclick="openModal('<?php echo $postName ?>'); currentSlide(<?php echo $counter; ?>)" class="realizacje__photo-container">
                             <?php
-                                if ( has_post_thumbnail() ) :
-                                    the_post_thumbnail();
+                                if (has_post_thumbnail()): the_post_thumbnail();
                                 endif;
                             ?>
                             </a>
@@ -60,29 +60,26 @@
                         <?php } ?>
 
 
-
                         <!-- The modals -->
                         <div id="<?php echo $postName; ?>" class="modal">
-                            <span class="close cursor" onclick="closeModal()">&times;</span>
                             <div class="modal-content">
-
-                                <div class="numbertext"><?php echo $counter; ?> / 4</div>
+                                <?php $photosNumber = 1 ?>
 
                                 <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" class="featured-image images<?php echo $postName; ?>" loading="lazy">
 
-                                <?php if(get_field('dodatkowe_zdjecie_1')['url']) { ?>
+                                <?php if(get_field('dodatkowe_zdjecie_1')['url']) { $photosNumber++ ?>
                                     <img src="<?php echo get_field('dodatkowe_zdjecie_1')['url'] ?>" class="featured-image images<?php echo $postName; ?>" loading="lazy">
                                 <?php } ?>
-                                <?php if(get_field('dodatkowe_zdjecie_2')['url']) { ?>
+                                <?php if(get_field('dodatkowe_zdjecie_2')['url']) { $photosNumber++ ?>
                                     <img src="<?php echo get_field('dodatkowe_zdjecie_2')['url'] ?>" class="featured-image images<?php echo $postName ?>" loading="lazy">
                                 <?php } ?>
-                                <?php if(get_field('dodatkowe_zdjecie_3')['url']) { ?>
+                                <?php if(get_field('dodatkowe_zdjecie_3')['url']) { $photosNumber++ ?>
                                     <img src="<?php echo get_field('dodatkowe_zdjecie_3')['url'] ?>" class="featured-image images<?php echo $postName; ?>" loading="lazy">
                                 <?php } ?>
-                                <?php if(get_field('dodatkowe_zdjecie_4')['url']) { ?>
+                                <?php if(get_field('dodatkowe_zdjecie_4')['url']) { $photosNumber++ ?>
                                     <img src="<?php echo get_field('dodatkowe_zdjecie_4')['url'] ?>" class="featured-image images<?php echo $postName; ?>" loading="lazy">
                                 <?php } ?>
-                                <?php if(get_field('dodatkowe_zdjecie_5')['url']) { ?>
+                                <?php if(get_field('dodatkowe_zdjecie_5')['url']) { $photosNumber++ ?>
                                     <img src="<?php echo get_field('dodatkowe_zdjecie_5')['url'] ?>" class="featured-image images<?php echo $postName; ?>" loading="lazy">
                                 <?php } ?>
 
@@ -93,17 +90,45 @@
                                             <div><?php the_content(); ?></div>
                                         </div>
                                         <div class="col-md-6">
-                                            <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" style="width: 200px; height: 200px; display: inline-flex">
-                                            <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" style="width: 200px; height: 200px; display: inline-flex">
-                                            <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" style="width: 200px; height: 200px; display: inline-flex">
+                                            <h4>Produkty wykorzystane przy realizacji:</h4>
+                                            <?php if(get_field('produkt_1')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_1'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_2')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_2')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_2'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_3')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_3')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_3'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_4')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_4')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_4'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_5')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_5')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Next/previous controls -->
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+                                    <div class="modal-nav">
+                                        <?php if($photosNumber > 1) { ?>
+                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        <?php } ?>
+                                        <div class="numbertext"><span class="number">1</span>/<?php echo $photosNumber; ?></div>
+                                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                                    </div>
                             </div>
                         </div>
 
@@ -120,24 +145,30 @@
 
 <script>
     let postName = '';
+    let slideIndex = 1;
 
     // Open the Modal
     function openModal(id) {
         postName = id;
+        slideIndex = 1;
+        document.getElementById(postName).getElementsByClassName('number')[0].innerHTML = slideIndex;
+        console.log(slideIndex)
         document.getElementById(postName).style.display = "block";
     }
 
     // Close the Modal
     function closeModal() {
         document.getElementById(postName).style.display = "none";
+        slideIndex = 1;
+        document.getElementById(postName).getElementsByClassName('number')[0].innerHTML = slideIndex;
     }
-
-    let slideIndex = 1;
-
 
     // Next/previous controls
     function plusSlides(n) {
+        console.log(slideIndex)
         showSlides(slideIndex += n);
+        console.log(slideIndex);
+        document.getElementById(postName).getElementsByClassName('number')[0].innerHTML = slideIndex;
     }
 
     // Thumbnail image controls
@@ -148,6 +179,7 @@
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("images"+postName);
+        console.log(slideIndex)
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
         for (i = 0; i < slides.length; i++) {

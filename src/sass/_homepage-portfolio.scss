@@ -1,6 +1,7 @@
 .homepage-portfolio {
   background-image: url(/wp-content/themes/sunblock/img/prywatne.webp);
   background-size: cover;
+  background-position: center;
 
   &--second {
     background-image: url(/wp-content/themes/sunblock/img/biurowe.webp);
@@ -212,7 +213,7 @@
 
 
 .subpage-top {
-  height: 500px;
+  height: 300px;
   background-image: url(/wp-content/themes/sunblock/img/prywatne.webp);
   background-size: cover;
   mix-blend-mode: multiply;
@@ -220,6 +221,18 @@
   &__wrapper {
     background-color: #1A2938;
     opacity: .95;
+
+    h1 {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -233,21 +246,29 @@
   }
 
   &__menu {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: $text-main-color;
-
-    &--active {
+    &.button--filled-dark {
+      width: 100%;
+      text-align: center;
       font-weight: 700;
+    }
+    &.button--dark {
+      width: 100%;
+      font-weight: 500;
     }
   }
 
   &__photos {
     a {
-      display: flex;
-      margin-bottom: 30px;
+      &.hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
     }
+  }
+
+  &__photo-container {
+    display: flex;
+    margin-bottom: 30px;
+    cursor: pointer;
   }
 
   .wp-post-image {
@@ -273,16 +294,47 @@
 .catalog {
   margin-top: 60px;
 
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__img-wrapper {
     position: relative;
-    width: 47%;
+    flex: calc(50% - 15px);
     height: 260px;
     display: inline-flex;
-    margin: 0 10px;
+    margin-bottom: 30px;
+
+    &:nth-of-type(odd) {
+      margin-right: 15px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 15px;
+    }
+
+    &:before {
+      background-color: #fff;
+      content: "";
+      left: 0;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+      position: absolute;
+    }
+
+    h3 {
+      color: $text-main-color;
+    }
   }
 
   img {
-    height: auto
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   &__desc {
@@ -295,12 +347,47 @@
   }
 
   &__menu {
+    h4 {
+      margin-bottom: 20px;
+    }
+
     a {
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px solid #E2E2E2;
       color: $text-main-color;
+
+      &[aria-current="page"] {
+        font-weight: 700;
+        background: #E2E2E2;
+      }
+    }
+
+    .menu {
+      margin: 0 60px 0 0;
     }
 
     ul {
       list-style: none;
+      margin: 0;
+
+      li a {
+        padding-left: 20px;
+      }
+
+      ul li a {
+        padding-left: 40px;
+      }
+    }
+
+    &>ul {
+      > li:first-of-type > a {
+        border-top: 1px solid #E2E2E2;
+      }
+    }
+
+    &>ul > li > ul {
+      display: none;
     }
   }
 

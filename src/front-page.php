@@ -14,7 +14,6 @@
     </div>
 
     <video autoplay muted preload class="top__video">
-        <!--<source src="wp-content/themes/sunblock/img/video.mov" type="video/quicktime">-->
         <source src="wp-content/themes/sunblock/img/video.webm" type="video/webm">
     </video>
 </section>

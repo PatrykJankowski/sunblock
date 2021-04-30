@@ -33,6 +33,11 @@
         color: $text-main-color;
     }
 
+    &--filled-dark {
+        background-color: $text-main-color;
+        color: $white
+    }
+
     &--mt {
         margin-top: 20px;
     }
