@@ -36,7 +36,7 @@
                 <?php wp_nav_menu(array('theme_location' => 'catalog-menu', 'container' => false)); ?>
             </div>
             <div class="col-md-8">
-                <div>
+                <div class="product">
                     <h3><?php the_title(); ?></h3>
                     <div>
                         <?php the_content(); ?>
@@ -47,28 +47,51 @@
                         // echo get_the_post_thumbnail( $featured_post, 'thumbnail' );
                         ?>
 
-                        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" data-fslightbox="gallery"><?php echo get_the_post_thumbnail( $featured_post, 'full' ); ?></a>
+                        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" data-fslightbox="gallery" class="thumbnail-wrapper"><?php echo get_the_post_thumbnail( $featured_post, 'full' ); ?></a>
 
                         <?php
+                        $photosNumber = 1;
+
                         $image = get_field('zdjecie_1');
-                        if( !empty( $image ) ):
+                        if(!empty($image)):
+                            $photosNumber++;
                         ?>
-                        <a href="<?php echo esc_url($image['url']); ?>" data-fslightbox="gallery" class="see-gallery">
-                            Zobacz galerię
-                        </a>
                         <?php endif; ?>
 
                         <?php
                         $image2 = get_field('zdjecie_2');
-                        if( !empty( $image2 ) ):
+                        if(!empty($image2)):
+                            $photosNumber++;
                         ?>
-                            <a href="<?php echo esc_url($image2['url']); ?>" data-fslightbox="gallery"></a>
+                            <a href="<?php echo esc_url($image2['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
                         <?php endif; ?>
+
 
                         <?php the_field('realizacja2'); ?>
                         <?php the_field('realizacja3'); ?>
 
+                        <?php
+                        if(!empty($photosNumber > 1)):
+                        ?>
 
+                        <div class="wrapper">
+                            <a href="<?php echo esc_url($image['url']); ?>" data-fslightbox="gallery" class="see-gallery">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1.5" y="1.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                    <rect x="1.5" y="1.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                    <rect x="1.5" y="1.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                    <rect x="4.5" y="4.5" width="16" height="16" fill="white"/>
+                                    <rect x="4.5" y="4.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                    <rect x="4.5" y="4.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                    <rect x="4.5" y="4.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
+                                </svg>
+                                Zobacz galerię (<?php echo $photosNumber; ?>)
+                            </a>
+
+                            <?php endif; ?>
+
+                            <a class="button button--dark">Zapytaj o szczegóły</a>
+                        </div>
                     </div>
                 </div>
             </div>

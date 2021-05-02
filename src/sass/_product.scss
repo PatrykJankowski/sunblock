@@ -1,3 +1,34 @@
+.product {
+  img {
+    max-height: 430px;
+    object-fit: cover;
+  }
+
+  .see-gallery {
+    display: inline-flex;
+    margin-right: 40px;
+    font-weight: 700;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .thumbnail-wrapper {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .gallery-photo {
+    display: none;
+  }
+}
+
 .technical-info {
   padding: 60px 0;
   background: url("img/dane-techniczne.webp");
