@@ -99,6 +99,7 @@
     </div>
 </section>
 
+<?php if(the_field('zalety')): ?>
 <section class="pluses">
     <div class="container">
         <div class="row">
@@ -109,6 +110,20 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
+
+<?php if(the_field('zalety')): ?>
+<section class="pluses">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="header header--center">Pliki do pobrania</h3>
+                <?php the_field('zalety'); ?>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
 
 <?php
     $typ = get_field_object('typ');

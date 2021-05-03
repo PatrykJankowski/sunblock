@@ -1,25 +1,27 @@
 <?php get_header(); ?>
 
+<div class="subpage-top__wrapper">
+    <section class="section section--pn">
+        <h1><?php the_title(); ?></h1>
+        <div class="subpage-top"></div>
+    </section>
+</div>
+
 <section class="section">
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <article>
+                <article class="article-details">
+                    <?php
+                    if ( has_post_thumbnail() ) {
+                        the_post_thumbnail();
+                    }
+                    ?>
+                    <time><?php echo get_the_date(); ?></time>
+                    <h3><?php the_title(); ?></h3>
                     <div>
-                        <time><?php echo get_the_date(); ?></time>
-                        <h3><?php the_title(); ?></h3>
-                        <div>
-                            <?php the_content(); ?>--
-                            <?php
-                            $featured_post = get_field('realizacja1');
-                            echo $featured_post->post_title;
-                            // echo wp_get_attachment_url(get_post_thumbnail_id($featured_post));
-                            echo get_the_post_thumbnail( $featured_post, 'thumbnail' );
-                            ?>--
-                            <?php the_field('realizacja2'); ?>--
-                            <?php the_field('realizacja3'); ?>--
-                        </div>
+                        <?php the_content(); ?>
                     </div>
                 </article>
             </div>

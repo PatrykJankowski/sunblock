@@ -75,7 +75,7 @@ function filter_wp_title( $title ) {
 
 
 function custom_excerpt_length( $length ) {
-    return 20;
+    return 5;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

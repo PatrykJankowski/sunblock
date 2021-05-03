@@ -7,7 +7,7 @@
     $args = array(
         'post_type' => 'post',
         'post_status' => 'publish',
-        'category_name' => 'realizacje',
+        'category_name' => 'realizacje-sunblock',
         'posts_per_page' => 32,
         'paged' => $paged,
     );
