@@ -10,27 +10,21 @@
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-
-                <?php
-                if ( have_posts() ) {
-                    while ( have_posts() ) {
-                        the_post();
-                        //
-                        // Post Content here
-                        //
-                    } // end while
-                } // end if
-                ?>
-
-                <article>
-                    <div>
-                        <h3><?php the_title(); ?></h3>
-                        <div>
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-                </article>
+            <div class="col-md-6">
+                <div>
+                    <?php the_content(); ?>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form action="" method="post" name="contact-me" id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Imię i nazwisko_">
+                    <input type="hidden" name="lastname" placeholder="Nazwisko_">
+                    <input type="email" name="email" placeholder="E-mail_">
+                    <input type="text" name="phone" placeholder="Numer telefonu (opcjonalnie)_">
+                    <textarea name="message" placeholder="Treść wiadomości_"></textarea>
+                    <input type="hidden" name="action" value="send_form">
+                    <input type="submit" value="Wyślij" class="button button--bg button--mt">
+                </form>
             </div>
         </div>
     </div>

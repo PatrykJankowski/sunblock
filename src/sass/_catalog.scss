@@ -4,6 +4,7 @@
   &__categories {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
   }
 
   &__img-wrapper {
@@ -67,6 +68,19 @@
       &[aria-current="page"] {
         font-weight: 700;
         background: #E2E2E2;
+      }
+    }
+
+    > ul > li > a {
+      &:after {
+        content: " ";
+        display: inline-flex;
+        align-self: center;
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
+        background: url(/wp-content/themes/sunblock/img/plus.svg);
+        background-position: center;
       }
     }
 

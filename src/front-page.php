@@ -7,7 +7,7 @@
                 <div class="top__content">
                     <h1>Swiatło czy cień?</h1>
                     <p class="subheader">Decyzja należy do Ciebie</p>
-                    <a href="" class="button">Zobacz ofertę</a>
+                    <a href="/katalog" class="button">Obejrzyj katalog</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 <div class="homepage-portfolio__inner">
                     <h3>Realizacje w pomieszczeniach prywatnych</h3>
                     <p>Zobacz nasze dotychczasowe realizacje oraz wizualizacje naszych produktów, przygotowane w celach marketingowych</p>
-                    <a href="#" class="button button--mt">Realizacje</a>
+                    <a href="/realizacje/prywatne" class="button button--mt">Zobacz realizacje</a>
                 </div>
             </div>
         </div>
@@ -57,9 +57,9 @@
         <div class="row no-gutters homepage-portfolio homepage-portfolio--second">
             <div class="col-md-6">
                 <div class="homepage-portfolio__inner homepage-portfolio__inner--bg-light homepage-portfolio__inner--text-dark">
-                    <h3>Realizacje w pomieszczeniach prywatnych</h3>
+                    <h3>Realizacje w pomieszczeniach usługowych</h3>
                     <p>Zobacz nasze dotychczasowe realizacje oraz wizualizacje naszych produktów, przygotowane w celach marketingowych</p>
-                    <a href="#" class="button button--dark button--mt">Realizacje</a>
+                    <a href="realizacje/uslugowe/" class="button button--dark button--mt">Zobacz realizacje</a>
                 </div>
             </div>
             <div class="col-md-6"></div>

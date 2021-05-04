@@ -48,6 +48,7 @@
 
                         <div class="col-md-3">
                             <a onclick="openModal('<?php echo $postName ?>'); currentSlide(<?php echo $counter; ?>)" class="realizacje__photo-container">
+                                <h4><?php echo the_title() ?></h4>
                             <?php
                                 if (has_post_thumbnail()): the_post_thumbnail();
                                 endif;

@@ -12,11 +12,43 @@
         #menu-katalog > li:first-of-type > ul {
             display: block;
         }
+        #menu-katalog > li:first-of-type > a:after {
+            background: none;        }
     </style>
 <?php elseif (in_category('rolety')): ?>
     <style>
         #menu-katalog > li:nth-of-type(2) > ul {
             display: block;
+        }
+        #menu-katalog > li:nth-of-type(2) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('moskitiery')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(3) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(3) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('karnisze')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(4) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(4) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('akcesoria')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(5) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(5) > a:after {
+            background: none;
         }
     </style>
 <?php endif ?>
@@ -99,31 +131,18 @@
     </div>
 </section>
 
-<?php if(the_field('zalety')): ?>
-<section class="pluses">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="header header--center">Zalety produktu</h3>
-                <?php the_field('zalety'); ?>
+<?php if(get_field('zalety')) { ?>
+    <section class="pluses">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="header header--center">Zalety produktu</h3>
+                    <?php the_field('zalety'); ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<?php endif; ?>
-
-<?php if(the_field('zalety')): ?>
-<section class="pluses">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="header header--center">Pliki do pobrania</h3>
-                <?php the_field('zalety'); ?>
-            </div>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
+    </section>
+<?php } ?>
 
 <?php
     $typ = get_field_object('typ');
@@ -160,6 +179,18 @@
     </div>
 </section>
 
+<?php if(get_field('zalety')) { ?>
+    <section class="pluses">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="header header--center">Pliki do pobrania</h3>
+                    <?php the_field('zalety'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php } ?>
 
 <script defer src="/wp-content/themes/sunblock/fslightbox.js"></script>
 

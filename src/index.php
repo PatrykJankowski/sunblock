@@ -32,8 +32,8 @@
             if($counter == 1) { ?>
         <div class="row no-gutters">
             <div class="col-md-12">
-                <div class="articles" style="display: flex">
-                    <article class="articles__article">
+                <div class="articles">
+                    <article class="articles__article articles__article--main">
                         <div class="articles__desc" style="flex-direction: column; width: 50%; left: 50%">
                             <data value="<?php echo get_the_date('d.m.Y'); ?>" class="articles__date"><?php echo get_the_date('d.m.Y'); ?></data>
                             <h3><?php the_title() ?></h3>
@@ -58,7 +58,7 @@
 
             <?php if($counter > 1) { ?>
             <div class="col-md-6">
-                <div class="articles" style="display: flex">
+                <div class="articles">
                     <article class="articles__article">
                         <div class="articles__desc" style="flex-direction: column; width: 50%; left: 50%">
                             <h3 class="articles__header"><?php the_title() ?></h3>

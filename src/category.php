@@ -2,16 +2,50 @@
 
 <?php get_header(); ?>
 
-<?php if (is_category('zaluzje')): ?>
+<?php global $wp; ?>
+
+<?php if (in_category('zaluzje')): ?>
     <style>
         #menu-katalog > li:first-of-type > ul {
             display: block;
         }
+        #menu-katalog > li:first-of-type > a:after {
+            background: none;        }
     </style>
-<?php elseif (is_category('rolety')): ?>
+<?php elseif (in_category('rolety')): ?>
     <style>
         #menu-katalog > li:nth-of-type(2) > ul {
             display: block;
+        }
+        #menu-katalog > li:nth-of-type(2) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('moskitiery')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(3) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(3) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('karnisze')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(4) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(4) > a:after {
+            background: none;
+        }
+    </style>
+<?php elseif (in_category('akcesoria')): ?>
+    <style>
+        #menu-katalog > li:nth-of-type(5) > ul {
+            display: block;
+        }
+        #menu-katalog > li:nth-of-type(5) > a:after {
+            background: none;
         }
     </style>
 <?php endif ?>
