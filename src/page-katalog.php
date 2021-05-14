@@ -3,7 +3,10 @@
 <?php get_header(); ?>
 
     <div class="subpage-top__wrapper">
-        <section class="subpage-top"></section>
+        <section class="section section--pn">
+            <h1><?php the_title(); ?></h1>
+            <div class="subpage-top"></div>
+        </section>
     </div>
 
     <section class="catalog">
@@ -15,7 +18,7 @@
                     <?php wp_nav_menu(array('theme_location' => 'catalog-menu', 'container' => false)); ?>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-12 col-lg-8">
                     <h3>Katalog produktów</h3>
                     <p>Zapoznaj się z naszymi produktami</p>
 

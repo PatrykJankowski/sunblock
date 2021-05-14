@@ -67,7 +67,7 @@
                 <h4>Nasze produkty</h4>
                 <?php wp_nav_menu(array('theme_location' => 'catalog-menu', 'container' => false)); ?>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-12 col-lg-8">
                 <div class="product">
                     <h3><?php the_title(); ?></h3>
                     <div>

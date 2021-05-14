@@ -30,7 +30,7 @@
             $posts->the_post();
 
             if($counter == 1) { ?>
-        <div class="row no-gutters">
+        <div class="row">
             <div class="col-md-12">
                 <div class="articles">
                     <article class="articles__article articles__article--main">
@@ -53,7 +53,7 @@
             <?php }
 
             elseif(!($counter % 2)) { ?>
-        <div class="row no-gutters">
+        <div class="row">
              <?php } ?>
 
             <?php if($counter > 1) { ?>

@@ -27,6 +27,7 @@ input {
 
   &[type='submit'] {
     height: auto;
+    cursor: pointer;
   }
 }
 
@@ -90,10 +91,21 @@ select {
   }
 }
 
+.contact-page {
+  input, textarea {
+    border: 1px solid #1A2938;
+    color: #1A2938;
+  }
+}
+
 .wpcf7 {
   p {
     line-height: 0;
   }
+}
+
+.wpcf7-not-valid-tip {
+  margin-bottom: 20px;
 }
 
 ::placeholder {

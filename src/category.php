@@ -51,7 +51,10 @@
 <?php endif ?>
 
     <div class="subpage-top__wrapper">
-        <section class="subpage-top"></section>
+        <section class="section section--pn">
+
+            <div class="subpage-top"></div>
+        </section>
     </div>
 
     <section class="catalog">
@@ -64,7 +67,7 @@
                 </div>
 
                 <?php if (is_category('katalog')): ?>
-                <div class="col-md-8">
+                <div class="col-md-12 col-lg-8">
                     <h3>Katalog produktów</h3>
                     <p>Zapoznaj się z naszymi produktami</p>
 
