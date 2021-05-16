@@ -180,17 +180,46 @@
 </section>
 
 <?php if(get_field('zalety')) { ?>
-    <section class="pluses">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="header header--center">Pliki do pobrania</h3>
-                    <?php the_field('zalety'); ?>
-                </div>
+<section class="pluses">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="header header--center">Pliki do pobrania</h3>
+                <?php the_field('zalety'); ?>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <?php } ?>
+
+
+<?php
+    $realizacja1 = get_field('realizacja_1');
+    $realizacja2 = get_field('realizacja_2');
+    $realizacja3 = get_field('realizacja_3');
+?>
+
+<section class="projects">
+    <h3 class="header header--center">Galeria realizacji</h3>
+    <?php echo get_the_post_thumbnail( $realizacja1); ?>
+
+    <div class="thumbs">
+        <img src="<?php echo esc_html( get_field('dodatkowe_zdjecie_1', $realizacja1->ID)['url'] ) ?>" class="thumb">
+    </div>
+</section>
+
+
+<section class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="header header--center">Zapytaj o szczegóły</h3>
+                <?php echo do_shortcode('[contact-form-7 id="241" title="Formularz kontaktowy"]'); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <script defer src="/wp-content/themes/sunblock/fslightbox.js"></script>
 

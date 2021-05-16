@@ -68,3 +68,23 @@
 .see-gallery {
   color: $text-main-color;
 }
+
+.projects {
+  position: relative;
+
+  .wp-post-image {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+  }
+}
+
+.thumbs {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  bottom: 50px;
+  justify-content: center;
+}
