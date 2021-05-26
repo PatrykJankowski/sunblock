@@ -60,7 +60,7 @@
     </section>
 </div>
 
-<section class="section">
+<section class="section section--pt-l">
     <div class="container">
         <div class="row">
             <div class="col-md-4 catalog__menu">
