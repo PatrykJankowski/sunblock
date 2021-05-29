@@ -79,7 +79,15 @@
                         // echo get_the_post_thumbnail( $featured_post, 'thumbnail' );
                         ?>
 
-                        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" data-fslightbox="gallery" class="thumbnail-wrapper"><?php echo get_the_post_thumbnail( $featured_post, 'full' ); ?></a>
+                        <?php if(get_post_thumbnail_id(get_the_ID())) { ?>
+                        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" data-fslightbox="gallery" class="thumbnail-wrapper">
+                            <?php echo get_the_post_thumbnail( $featured_post, 'full' ); ?>
+                        </a>
+                        <?php } else { ?>
+                        <a class="thumbnail-wrapper">
+                            <img src="/wp-content/themes/sunblock/img/brak-obrazka.webp">
+                        </a>
+                        <?php } ?>
 
                         <?php
                         $photosNumber = 1;
@@ -122,7 +130,7 @@
 
                             <?php endif; ?>
 
-                            <a class="button button--dark">Zapytaj o szczegóły</a>
+                            <a href="#form" class="button button--dark">Zapytaj o szczegóły</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +144,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="header header--center">Zalety produktu</h3>
+                    <h3 class="header header--center header--mb-m">Zalety produktu</h3>
                     <?php the_field('zalety'); ?>
                 </div>
             </div>
@@ -147,45 +155,55 @@
 <?php
     $typ = get_field_object('typ');
     $mocowanie = get_field_object('mocowanie');
+    $wysokosc = get_field_object('wysokosc');
+    $szerokosc = get_field_object('szerokosc');
 ?>
 
+<?php if ($typ['value'] or $mocowanie['value'] or $wysokosc['value'] or $szerokosc['value']) { ?>
 <section class="technical-info">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="header header--center">Dane techniczne</h3>
+                <h3 class="header header--center header--mb-m">Dane techniczne</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
+                <?php if ($typ['value']) { ?>
                 <div class="wrapper">
                     <h4><?php echo $typ['label']; ?></h4> <p><?php echo $typ['value']; ?></p>
                 </div>
-
+                <?php } ?>
+                <?php if ($mocowanie['value']) { ?>
                 <div class="wrapper">
                     <h4><?php echo $mocowanie['label']; ?></h4> <p><?php echo $mocowanie['value']; ?></p>
                 </div>
-
+                <?php } ?>
+                <?php if ($wysokosc['value']) { ?>
                 <div class="wrapper">
-                    <h4><?php echo $typ['label']; ?></h4> <p><?php echo $typ['value']; ?></p>
+                    <h4><?php echo $wysokosc['label']; ?></h4> <p><?php echo $wysokosc['value']; ?></p>
                 </div>
-
+                <?php } ?>
+                <?php if ($szerokosc['value']) { ?>
                 <div class="wrapper">
-                    <h4><?php echo $typ['label']; ?></h4> <p><?php echo $typ['value']; ?></p>
+                    <h4><?php echo $szerokosc['label']; ?></h4> <p><?php echo $szerokosc['value']; ?></p>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>
 </section>
+<?php } ?>
 
-<?php if(get_field('zalety')) { ?>
+
+<?php if(get_field('files')) { ?>
 <section class="pluses">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="header header--center">Pliki do pobrania</h3>
-                <?php the_field('zalety'); ?>
+                <h3 class="header header--center header--mb-m">Pliki do pobrania</h3>
+                <?php the_field('files'); ?>
             </div>
         </div>
     </div>
@@ -197,23 +215,44 @@
     $realizacja1 = get_field('realizacja_1');
     $realizacja2 = get_field('realizacja_2');
     $realizacja3 = get_field('realizacja_3');
+
+    $realizacje[1][1] = get_field('dodatkowe_zdjecie_1', $realizacja1->ID)['url'];
+    $realizacje[1][2] = get_field('dodatkowe_zdjecie_2', $realizacja1->ID)['url'];
+    $realizacje[1][3] = get_field('dodatkowe_zdjecie_3', $realizacja1->ID)['url'];
+    $realizacje[2][1] = get_field('dodatkowe_zdjecie_1', $realizacja2->ID)['url'];
+    $realizacje[2][2] = get_field('dodatkowe_zdjecie_2', $realizacja2->ID)['url'];
+    $realizacje[2][3] = get_field('dodatkowe_zdjecie_3', $realizacja2->ID)['url'];
+    $realizacje[3][1] = get_field('dodatkowe_zdjecie_1', $realizacja2->ID)['url'];
+    $realizacje[3][2] = get_field('dodatkowe_zdjecie_2', $realizacja2->ID)['url'];
+    $realizacje[3][3] = get_field('dodatkowe_zdjecie_3', $realizacja2->ID)['url'];
 ?>
 
+<?php if ($realizacja1) { ?>
 <section class="projects">
-    <h3 class="header header--center">Galeria realizacji</h3>
-    <?php echo get_the_post_thumbnail( $realizacja1); ?>
+    <h3 class="header header--center header--mb-m header--mt-l">Galeria realizacji</h3>
+    <?php echo get_the_post_thumbnail($realizacja1); ?>
 
     <div class="thumbs">
-        <img src="<?php echo esc_html( get_field('dodatkowe_zdjecie_1', $realizacja1->ID)['url'] ) ?>" class="thumb">
+
+        <?php for ($i=1; $i<=count($realizacje); $i++) { ?>
+            <?php for ($j=1; $j<=count($realizacje[$i]); $j++) { ?>
+                <?php if ($realizacje[$i][$j]) { ?>
+                    <a href="<?php echo esc_url($realizacje[$i][$j]); ?>" data-fslightbox="projects">
+                        <img src="<?php echo esc_html($realizacje[$i][$j]) ?>" class="thumb">
+                    </a>
+                <?php } ?>
+            <?php } ?>
+        <?php } ?>
+
     </div>
 </section>
+<?php } ?>
 
-
-<section class="contact-page">
+<section id="form" class="section contact-page">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="header header--center">Zapytaj o szczegóły</h3>
+                <h3 class="header header--center header--mb-m">Zapytaj o szczegóły</h3>
                 <?php echo do_shortcode('[contact-form-7 id="241" title="Formularz kontaktowy"]'); ?>
             </div>
         </div>

@@ -27,8 +27,8 @@
 
             <div class="row realizacje__menu-wrapper">
                 <div class="col-md-4"><a href="/realizacje" class="realizacje__menu button button--dark">Wszystkie</a></div>
-                <div class="col-md-4"><a href="#" class="realizacje__menu button button--dark">Pomieszczenia prywatne</a></div>
-                <div class="col-md-4"><a href="/realizacje/uslugowe" class="realizacje__menu button button--filled-dark">Pomieszczenia usługowe</a></div>
+                <div class="col-md-4"><a href="/realizacje/prywatne" class="realizacje__menu button button--dark">Pomieszczenia prywatne</a></div>
+                <div class="col-md-4"><a href="#" class="realizacje__menu button button--filled-dark">Pomieszczenia usługowe</a></div>
             </div>
 
             <div class="realizacje__photos">
@@ -91,31 +91,35 @@
                                         <div><?php the_content(); ?></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4>Produkty wykorzystane przy realizacji:</h4>
                                         <?php if(get_field('produkt_1')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_1'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_2')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_2')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_2'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_3')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_3')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_3'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_4')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_4')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_4'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_5')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_5')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
-                                            </a>
+
+                                            <h4>Produkty wykorzystane przy realizacji:</h4>
+                                            <?php if(get_field('produkt_1')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_1'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_2')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_2')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_2'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_3')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_3')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_3'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_4')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_4')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_4'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_5')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_5')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+
                                         <?php } ?>
                                     </div>
                                 </div>

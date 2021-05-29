@@ -22,6 +22,10 @@
       margin-left: 15px;
     }
 
+    &:nth-of-type(odd):last-of-type{
+      margin-right: 0;
+    }
+
     &:before {
       background-color: #fff;
       content: "";

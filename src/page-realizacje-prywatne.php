@@ -91,31 +91,35 @@
                                         <div><?php the_content(); ?></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h4>Produkty wykorzystane przy realizacji:</h4>
                                         <?php if(get_field('produkt_1')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_1'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_2')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_2')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_2'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_3')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_3')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_3'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_4')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_4')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_4'))); ?>" class="product">
-                                            </a>
-                                        <?php } ?>
-                                        <?php if(get_field('produkt_5')) { ?>
-                                            <a href="<?php echo get_post_permalink(get_field('produkt_5')->ID); ?>" target="_blank">
-                                                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
-                                            </a>
+
+                                            <h4>Produkty wykorzystane przy realizacji:</h4>
+
+                                            <?php if(get_field('produkt_1')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_1'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_2')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_2')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_2'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_3')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_3')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_3'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_4')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_4')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_4'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
+                                            <?php if(get_field('produkt_5')) { ?>
+                                                <a href="<?php echo get_post_permalink(get_field('produkt_5')->ID); ?>" target="_blank">
+                                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
+                                                </a>
+                                            <?php } ?>
                                         <?php } ?>
                                     </div>
                                 </div>

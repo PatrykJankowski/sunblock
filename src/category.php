@@ -73,27 +73,27 @@
 
                     <div class="catalog__categories">
 
-                        <a href="/zaluzje" class="catalog__img-wrapper">
+                        <a href="produkty/zaluzje" class="catalog__img-wrapper">
                             <h3 class="catalog__desc">Żaluzje</h3>
                             <img src="/wp-content/themes/sunblock/img/zaluzje.webp" alt="" loading="lazy"">
                         </a>
 
-                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=141" class="catalog__img-wrapper">
+                        <a href="/produkty/rolety" class="catalog__img-wrapper">
                             <h3 class="catalog__desc">Rolety</h3>
                             <img src="/wp-content/themes/sunblock/img/rolety.webp" alt="" loading="lazy"">
                         </a>
 
-                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=138" class="catalog__img-wrapper">
+                        <a href="/produkty/moskitiery" class="catalog__img-wrapper">
                             <h3 class="catalog__desc">Moskitiery</h3>
                             <img src="/wp-content/themes/sunblock/img/moskitiery.webp" alt="" loading="lazy"">
                         </a>
 
-                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=136" class="catalog__img-wrapper">
+                        <a href="/produkty/karnisze" class="catalog__img-wrapper">
                             <h3 class="catalog__desc">Karnisze</h3>
                             <img src="/wp-content/themes/sunblock/img/karnisze.webp" alt="" loading="lazy"">
                         </a>
 
-                        <a href="https://sunblock.usermd.net/?post_type=post&amp;p=134" class="catalog__img-wrapper" style="width: 50%">
+                        <a href="/produkty/akcesoria" class="catalog__img-wrapper" style="width: 50%">
                             <h3 class="catalog__desc">Akcesoria</h3>
                             <img src="/wp-content/themes/sunblock/img/akcesoria.webp" alt="" loading="lazy"">
                         </a>
@@ -120,8 +120,9 @@
                                         <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail();
-                                        }
-                                        ?>
+                                        } else { ?>
+                                            <img src="/wp-content/themes/sunblock/img/brak-obrazka.webp">
+                                        <?php } ?>
                                     </a>
 
                                 <?php

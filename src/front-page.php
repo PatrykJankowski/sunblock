@@ -47,8 +47,7 @@
             <div class="col-md-6"></div>
             <div class="col-md-6">
                 <div class="homepage-portfolio__inner">
-                    <h3>Realizacje w pomieszczeniach prywatnych</h3>
-                    <p>Zobacz nasze dotychczasowe realizacje oraz wizualizacje naszych produktów, przygotowane w celach marketingowych</p>
+                    <h3>Realizacje i wizualizacje produktów w pomieszczeniach prywatnych</h3>
                     <a href="/realizacje/prywatne" class="button button--mt">Zobacz realizacje</a>
                 </div>
             </div>
@@ -57,8 +56,7 @@
         <div class="row no-gutters homepage-portfolio homepage-portfolio--second">
             <div class="col-md-6">
                 <div class="homepage-portfolio__inner homepage-portfolio__inner--bg-light homepage-portfolio__inner--text-dark">
-                    <h3>Realizacje w pomieszczeniach usługowych</h3>
-                    <p>Zobacz nasze dotychczasowe realizacje oraz wizualizacje naszych produktów, przygotowane w celach marketingowych</p>
+                    <h3>Realizacje i wizualizacje produktów w pomieszczeniach usługowych</h3>
                     <a href="realizacje/uslugowe/" class="button button--dark button--mt">Zobacz realizacje</a>
                 </div>
             </div>
@@ -79,16 +77,16 @@
 
         <div class="row">
             <div class="col-md-6">
-                <a href="#" class="hp-catalog hp-catalog--1">
+                <a href="/produkty/zaluzje" class="hp-catalog hp-catalog--2">
                     <div class="hp-catalog__inner">
-                        <h3>Rolety</h3>
+                        <h3>Żaluzje</h3>
                     </div>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="hp-catalog hp-catalog--2">
+                <a href="/produkty/rolety" class="hp-catalog hp-catalog--1">
                     <div class="hp-catalog__inner">
-                        <h3>Żaluzje</h3>
+                        <h3>Rolety</h3>
                     </div>
                 </a>
             </div>
@@ -96,21 +94,21 @@
 
         <div class="row" style="margin-top: 30px">
             <div class="col-md-4">
-                <a href="#" class="hp-catalog hp-catalog--3">
+                <a href="/produkty/moskitiery" class="hp-catalog hp-catalog--3">
                     <div class="hp-catalog__inner">
                         <h3>Moskitiery</h3>
                     </div>
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#" class="hp-catalog hp-catalog--4">
+                <a href="/produkty/karnisze" class="hp-catalog hp-catalog--4">
                     <div class="hp-catalog__inner">
                         <h3>Karnisze</h3>
                     </div>
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#" class="hp-catalog hp-catalog--5">
+                <a href="/produkty/akcesoria" class="hp-catalog hp-catalog--5">
                     <div class="hp-catalog__inner">
                         <h3>Akcesoria</h3>
                     </div>
@@ -137,7 +135,7 @@
             </div>
             <div class="col-md-6">
                 <p>Wypełnij formularz na stronie lub skontaktuj się z nami bezpośrednio. Umówimy video czat lub wizytę domową.</p>
-                <a class="button button--dark button--mt-s">Formularz</a>
+                <a href="/kontakt" class="button button--dark button--mt-s">Przejdź do formularza</a>
             </div>
         </div>
         <div class="row">

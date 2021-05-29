@@ -3,12 +3,12 @@ header #ajaxsearchlite1 .probox, body div.asl_w .probox .promagnifier, body div.
 }
 
 header div.asl_w {
-  border: 1px solid #fff;
-  border-radius: 20px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,.2);
 }
 
 header div[id*='ajaxsearchlite'].wpdreams_asl_container {
-  width: 320px;
+  width: 306px;
 }
 
 body div.asl_r.vertical {

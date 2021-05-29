@@ -91,6 +91,8 @@
                                             <div><?php the_content(); ?></div>
                                         </div>
                                         <div class="col-md-6">
+                                          <?php if(get_field('produkt_1')) { ?>
+
                                             <h4>Produkty wykorzystane przy realizacji:</h4>
                                             <?php if(get_field('produkt_1')) { ?>
                                                 <a href="<?php echo get_post_permalink(get_field('produkt_1')->ID); ?>" target="_blank">
@@ -117,6 +119,8 @@
                                                     <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_field('produkt_5'))); ?>" class="product">
                                                 </a>
                                             <?php } ?>
+
+                                          <?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +157,6 @@
         postName = id;
         slideIndex = 1;
         document.getElementById(postName).getElementsByClassName('number')[0].innerHTML = slideIndex;
-        console.log(slideIndex)
         document.getElementById(postName).style.display = "block";
     }
 
@@ -166,21 +169,19 @@
 
     // Next/previous controls
     function plusSlides(n) {
-        console.log(slideIndex)
         showSlides(slideIndex += n);
-        console.log(slideIndex);
         document.getElementById(postName).getElementsByClassName('number')[0].innerHTML = slideIndex;
     }
 
     // Thumbnail image controls
     function currentSlide(n) {
-        showSlides(slideIndex = n);
+        //showSlides(slideIndex = n);
+        showSlides(n);
     }
 
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("images"+postName);
-        console.log(slideIndex)
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
         for (i = 0; i < slides.length; i++) {

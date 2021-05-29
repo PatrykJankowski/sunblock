@@ -104,8 +104,14 @@ select {
   }
 }
 
-.wpcf7-not-valid-tip {
+body .wpcf7-not-valid-tip {
   margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  margin: 0;
 }
 
 ::placeholder {
