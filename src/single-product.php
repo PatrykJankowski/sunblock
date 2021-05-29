@@ -253,7 +253,7 @@
         <div class="row">
             <div class="col">
                 <h3 class="header header--center header--mb-m">Zapytaj o szczegóły</h3>
-                <?php echo do_shortcode('[contact-form-7 id="241" title="Formularz kontaktowy"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="289" title="Zapytaj o produkt"]'); ?>
             </div>
         </div>
     </div>

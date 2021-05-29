@@ -158,3 +158,11 @@ body .wpcf7-not-valid-tip {
   height: 40px;
   margin: 0;
 }
+
+#wpcf7-f289-o1 form {
+  display: flex;
+
+  .wpcf7-response-output {
+    display: none;
+  }
+}
