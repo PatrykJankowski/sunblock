@@ -51,6 +51,7 @@
             </nav>
 
             <nav id="navbar__nav-mobile" class="navbar__nav-mobile">
+                <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                 <?php wp_nav_menu(array('theme_location' => 'nav-menu', 'container' => false)); ?>
             </nav>
 

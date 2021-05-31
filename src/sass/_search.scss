@@ -1,5 +1,9 @@
-header #ajaxsearchlite1 .probox, body div.asl_w .probox .promagnifier, body div.asl_w {
+header #ajaxsearchlite1 .probox, header #ajaxsearchlite2 .probox, body div.asl_w .probox .promagnifier, body div.asl_w {
   background: transparent;
+}
+
+header #ajaxsearchlite2 {
+  margin: 30px auto 10px;
 }
 
 header div.asl_w {

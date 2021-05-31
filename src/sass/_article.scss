@@ -29,13 +29,18 @@
     &:before {
       background-color: #fff;
       content: "";
-      left: 50%;
+      left: 0;
       top: 0;
       display: block;
       height: 100%;
-      width: 50%;
+      width: 100%;
       opacity: 0.5;
       position: absolute;
+
+      @include for-size(tablet) {
+        left: 50%;
+        width: 50%;
+      }
     }
   }
 
@@ -47,13 +52,18 @@
 
   &__desc {
     flex-direction: column;
-    width: 50%;
-    left: 50%;
     position: absolute;
     display: flex;
     height: 100%;
+    width: 100%;
+    left: 0;
     justify-content: center;
     padding: 20px;
+
+    @include for-size(tablet) {
+      width: 50%;
+      left: 50%;
+    }
   }
 
   &__header {

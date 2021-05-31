@@ -59,9 +59,13 @@
 
 .hp-catalog {
   display: flex;
-  height: 400px;
+  height: 300px;
   background-size: cover;
   color: $text-main-color;
+
+  @include for-size(tablet) {
+    height: 400px;
+  }
 
   &--1 {
     background-image: url(/wp-content/themes/sunblock/img/rolety.webp);
@@ -74,6 +78,11 @@
 
   &--2 {
     background-image: url(/wp-content/themes/sunblock/img/zaluzje.webp);
+    margin-bottom: -15px;
+
+    @include for-size(tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &--3 {

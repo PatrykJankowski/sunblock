@@ -73,7 +73,7 @@
 
                     <div class="catalog__categories">
 
-                        <a href="produkty/zaluzje" class="catalog__img-wrapper">
+                        <a href="/produkty/zaluzje" class="catalog__img-wrapper">
                             <h3 class="catalog__desc">Żaluzje</h3>
                             <img src="/wp-content/themes/sunblock/img/zaluzje.webp" alt="" loading="lazy"">
                         </a>

@@ -78,7 +78,7 @@
     }
 
     let navOpened = false;
-    let initHeight = 260;
+    let initHeight = 350;
 
     function slideToggle() {
 

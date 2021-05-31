@@ -1,6 +1,7 @@
 .top {
   display: flex;
   flex-direction: column;
+  background: #000;
 
   &__video {
     width: 100%;
@@ -8,7 +9,6 @@
     max-height: 1000px;
     margin-top: -80px;
     object-fit: cover;
-
 
     @include for-size(tablet) {
       min-height: 900px;

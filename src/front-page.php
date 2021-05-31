@@ -77,14 +77,14 @@
 
         <div class="row">
             <div class="col-md-6">
-                <a href="/produkty/zaluzje" class="hp-catalog hp-catalog--2">
+                <a href="/produkty/zaluzje" class="hp-catalog hp-catalog--1">
                     <div class="hp-catalog__inner">
                         <h3>Żaluzje</h3>
                     </div>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="/produkty/rolety" class="hp-catalog hp-catalog--1">
+                <a href="/produkty/rolety" class="hp-catalog hp-catalog--2">
                     <div class="hp-catalog__inner">
                         <h3>Rolety</h3>
                     </div>
@@ -157,7 +157,7 @@
                     </li>
                     <li class="hp-small-list">
                         <img src="wp-content/themes/sunblock/img/kostka.svg">
-                        Oferuemy opcjonalną usługę wizualizacji 3D Twojego projektu
+                        Oferujemy opcjonalną usługę wizualizacji 3D Twojego projektu
                     </li>
                 </ul>
             </div>
@@ -170,7 +170,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Wypełnij formularz na stronie lub skontaktuj się z nami bezpośrednio. Umówimy video czat lub wizytę domową.</p>
+                <p>Montujemy Twój nowy system zaciemnienia, wcześniej umawiając się na konkretną datę i wyznaczając czas pracy.</p>
             </div>
         </div>
     </div>

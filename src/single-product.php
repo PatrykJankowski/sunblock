@@ -110,11 +110,9 @@
                         <?php the_field('realizacja2'); ?>
                         <?php the_field('realizacja3'); ?>
 
-                        <?php
-                        if(!empty($photosNumber > 1)):
-                        ?>
-
                         <div class="wrapper">
+                            <?php if(!empty($photosNumber > 1)): ?>
+
                             <a href="<?php echo esc_url($image['url']); ?>" data-fslightbox="gallery" class="see-gallery">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="1.5" y="1.5" width="16" height="16" stroke="#1A2938" stroke-width="3"/>
@@ -248,7 +246,7 @@
 </section>
 <?php } ?>
 
-<section id="form" class="section contact-page">
+<section id="form" class="section contact-page form-desktop">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -259,6 +257,16 @@
     </div>
 </section>
 
+<section id="form" class="section contact-page form-mobile">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="header header--center header--mb-m">Zapytaj o szczegóły</h3>
+                <?php echo do_shortcode('[contact-form-7 id="241" title="Zapytaj o produkt"]'); ?>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script defer src="/wp-content/themes/sunblock/fslightbox.js"></script>
 
