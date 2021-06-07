@@ -180,6 +180,14 @@
       top: 6px;
     }
   }
+
+  &__social {
+    display: none;
+
+    @media only screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
 }
 
 

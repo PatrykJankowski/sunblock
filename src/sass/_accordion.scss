@@ -1,0 +1,27 @@
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: $text-main-color;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion--reverted:after  {
+  color: $white;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

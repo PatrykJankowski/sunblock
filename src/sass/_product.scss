@@ -56,6 +56,15 @@
   .wrapper {
     display: flex;
     margin-bottom: 20px;
+    flex-direction: column;
+
+    @include for-size(desktop) {
+      flex-direction: row;
+    }
+
+    p {
+      max-width: 600px;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -65,17 +74,30 @@
   h4 {
     display: flex;
     align-items: center;
-    width: 30%;
-    justify-content: flex-end;
     margin-right: 40px;
+
+    @include for-size(desktop) {
+      width: 30%;
+      justify-content: flex-end;
+    }
   }
 }
 
 .pluses {
   padding: 60px 0 0;
 
-  svg {
-    margin-right: 20px;
+  &__plus {
+    display: flex;
+    margin: $s 0;
+
+    svg {
+      margin-right: 20px;
+    }
+
+    a {
+      color: $text-main-color;
+      font-weight: 600;
+    }
   }
 }
 
@@ -87,7 +109,7 @@
 .projects {
   position: relative;
 
-  .wp-post-image {
+  &__main-image {
     display: flex;
     width: 100%;
     height: 700px;
@@ -114,6 +136,24 @@
       width: 100%;
       object-fit: cover
     }
+  }
+}
+
+.description {
+  &__content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__photo {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__one-line {
+    margin-top: $m;
   }
 }
 

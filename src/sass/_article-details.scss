@@ -7,4 +7,9 @@
     display: block;
     margin-bottom: 10px;
   }
+
+  a {
+    color: $text-main-color;
+    text-decoration: underline;
+  }
 }

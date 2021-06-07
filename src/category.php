@@ -101,40 +101,34 @@
                 </div>
                 <?php else: ?>
                 <div class="col-md-8">
-                        <h3>Katalog produktów</h3>
-                        <p>Zapoznaj się z naszymi produktami</p>
+                    <h3>Katalog produktów</h3>
+                    <p>Zapoznaj się z naszymi produktami</p>
 
-                        <div class="catalog__categories">
+                    <div class="catalog__categories">
+                        <?php
+
+                        if ( have_posts() ) :
+                            while ( have_posts() ) :
+                                the_post();
+                                ?>
+
+                                <a href="<?php echo get_post_permalink() ?>" class="catalog__img-wrapper">
+                                    <h3 class="catalog__desc"><?php the_title() ?></h3>
+                                    <?php
+                                    if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail();
+                                    } else { ?>
+                                        <img src="/wp-content/themes/sunblock/img/brak-obrazka.webp">
+                                    <?php } ?>
+                                </a>
 
                             <?php
-
-                            if ( have_posts() ) :
-
-                                while ( have_posts() ) :
-
-                                    the_post();
-                                    ?>
-
-                                    <a href="<?php echo get_post_permalink() ?>" class="catalog__img-wrapper">
-                                        <h3 class="catalog__desc"><?php the_title() ?></h3>
-                                        <?php
-                                        if ( has_post_thumbnail() ) {
-                                            the_post_thumbnail();
-                                        } else { ?>
-                                            <img src="/wp-content/themes/sunblock/img/brak-obrazka.webp">
-                                        <?php } ?>
-                                    </a>
-
-                                <?php
-                                endwhile;
-                            endif;
-                            ?>
-                        </div>
-
+                            endwhile;
+                        endif;
+                        ?>
                     </div>
+                </div>
                 <?php endif; ?>
-
-
             </div>
         </div>
     </section>

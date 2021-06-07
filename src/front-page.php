@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col">
                 <div class="top__content">
-                    <h1>Swiatło czy cień?</h1>
+                    <h1>Światło czy cień?</h1>
                     <p class="subheader">Decyzja należy do Ciebie</p>
                     <a href="/katalog" class="button">Obejrzyj katalog</a>
                 </div>
