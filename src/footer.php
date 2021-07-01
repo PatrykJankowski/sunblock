@@ -21,7 +21,7 @@
 
                     <div class="footer__contact-info">
                         <img class="footer__icon" src="/wp-content/themes/sunblock/img/phone.svg">
-                        <a href="tel:+48123234345">+48 123 456 789</a>
+                        <a href="tel:+48737340300">+48 737 340 300</a>, &nbsp;<a href="tel:+48737339696">+48 737 339 696</a>
                     </div>
 
                     <div class="footer__contact-info">

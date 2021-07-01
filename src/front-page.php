@@ -6,7 +6,7 @@
             <div class="col">
                 <div class="top__content">
                     <h1>Światło czy cień?</h1>
-                    <p class="subheader">Decyzja należy do Ciebie</p>
+                    <p class="subheader">Systemy zaciemnienia skrojone na miarę</p>
                     <a href="/katalog" class="button">Obejrzyj katalog</a>
                 </div>
             </div>
@@ -71,7 +71,7 @@
 
         <div class="row">
             <div class="col">
-                <h2 class="header header--center header--mb-xxl">...oraz katalog produktów</h2>
+                <h2 class="header header--center header--mb-xxl">...oraz katalog produktów:</h2>
             </div>
         </div>
 
@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Wypełnij formularz na stronie lub skontaktuj się z nami bezpośrednio. Umówimy video czat lub wizytę domową.</p>
+                <p>Wypełnij formularz na stronie lub skontaktuj się z nami bezpośrednio. Oddzwonimy, umówimy video czat lub wizytę na miejscu montażu.</p>
                 <a href="/kontakt" class="button button--dark button--mt-s">Przejdź do formularza</a>
             </div>
         </div>
@@ -221,7 +221,8 @@
             <div class="col-md-6">
                 <div class="hp-form-section__info">
                     <h3>Napisz do nas lub zadzwoń</h3>
-                    <h2>666 666 666</h2>
+                    <h2>+48 737 340 300</h2>
+                    <h2 style="margin-top: 0">+48 737 339 696</h2>
                     <p>Chętnie odpowiemy na wszelkie pytania oraz umówimy wizytę</p>
                 </div>
             </div>
