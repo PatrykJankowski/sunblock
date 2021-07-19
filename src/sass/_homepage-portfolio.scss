@@ -41,7 +41,6 @@
     margin-top: 20px;
     background-color: #1A2938;
     font-size: 30px;
-    border-radius: 6px;
     transition: .5s;
 
     @include for-size(tablet) {
@@ -68,7 +67,7 @@
   }
 
   &--1 {
-    background-image: url(/wp-content/themes/sunblock/img/rolety.webp);
+    background-image: url(/wp-content/themes/sunblock/img/zaluzje.webp);
     margin-bottom: 15px;
 
     @include for-size(tablet) {
@@ -77,7 +76,7 @@
   }
 
   &--2 {
-    background-image: url(/wp-content/themes/sunblock/img/zaluzje.webp);
+    background-image: url(/wp-content/themes/sunblock/img/rolety.webp);
     margin-bottom: -15px;
 
     @include for-size(tablet) {

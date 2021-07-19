@@ -103,7 +103,39 @@
                         if(!empty($image2)):
                             $photosNumber++;
                         ?>
-                            <a href="<?php echo esc_url($image2['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
+                        <a href="<?php echo esc_url($image2['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
+                        <?php endif; ?>
+
+                        <?php
+                        $image3 = get_field('zdjecie_3');
+                        if(!empty($image3)):
+                            $photosNumber++;
+                        ?>
+                        <a href="<?php echo esc_url($image3['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
+                        <?php endif; ?>
+
+                        <?php
+                        $image4 = get_field('zdjecie_4');
+                        if(!empty($image4)):
+                            $photosNumber++;
+                        ?>
+                        <a href="<?php echo esc_url($image4['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
+                        <?php endif; ?>
+
+                        <?php
+                        $image5 = get_field('zdjecie_5');
+                        if(!empty($image5)):
+                            $photosNumber++;
+                        ?>
+                        <a href="<?php echo esc_url($image5['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
+                        <?php endif; ?>
+
+                        <?php
+                        $image6 = get_field('zdjecie_6');
+                        if(!empty($image6)):
+                            $photosNumber++;
+                        ?>
+                        <a href="<?php echo esc_url($image6['url']); ?>" data-fslightbox="gallery" class="gallery-photo"></a>
                         <?php endif; ?>
 
 
@@ -328,7 +360,7 @@
 
 <?php if ($realizacja1) { ?>
 <section class="projects">
-    <h3 class="header header--center header--mb-m header--mt-l accordion active">Galeria realizacji</h3>
+    <h3 class="header header--center header--mb-m header--mt-l accordion active container" style="padding-left: 30px; padding-right: 30px">Galeria realizacji</h3>
     <div class="panel" style="max-height: 2000px;">
         <a href="<?php echo $realizacja1['url']; ?>" data-fslightbox="projects">
             <img src="<?php echo $realizacja1['url']; ?>" class="projects__main-image">
