@@ -81,7 +81,8 @@
 
                         <?php if(get_post_thumbnail_id(get_the_ID())) { ?>
                         <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>" data-fslightbox="gallery" class="thumbnail-wrapper">
-                            <?php echo get_the_post_thumbnail( $featured_post, 'full' ); ?>
+                            <?php /*echo get_the_post_thumbnail( $featured_post, 'full' ); */?>
+                            <?php the_post_thumbnail(); ?>
                         </a>
                         <?php } else { ?>
                         <a class="thumbnail-wrapper">

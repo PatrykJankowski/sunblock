@@ -161,8 +161,9 @@ body .wpcf7-not-valid-tip {
 
 #wpcf7-f289-o1 form {
   display: flex;
+  flex-wrap: wrap;
 
-  .wpcf7-response-output {
+  /*.wpcf7-response-output {
     display: none;
-  }
+  }*/
 }

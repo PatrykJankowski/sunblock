@@ -36,6 +36,13 @@
       width: 100%;
       opacity: 0.5;
       position: absolute;
+      transition: .5s;
+    }
+
+    &:hover {
+      &:before {
+        background-color: transparent;
+      }
     }
 
     h3 {

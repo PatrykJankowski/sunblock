@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <video autoplay muted preload class="top__video">
+    <video autoplay muted loop class="top__video">
         <source src="wp-content/themes/sunblock/img/video.webm" type="video/webm">
     </video>
 </section>
