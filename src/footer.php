@@ -47,7 +47,7 @@
                         <a class="footer__link" href="/katalog">Katalog produktów</a>
                         <a class="footer__link" href="/blog">Blog</a>
                         <a class="footer__link" href="/kontakt">Kontakt</a>
-                        <a class="footer__link" href="/polityka-prywatnosci">Polityka prywatności</a>
+                        <a class="footer__link" href="/polityka-prywatnosci">Polityka prywatności i plików cookies</a>
                     </div>
                 </div>
             </div>

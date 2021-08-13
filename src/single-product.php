@@ -171,6 +171,98 @@
 </section>
 
 <?php
+$opis_po_lewej = get_field('opis_po_lewej');
+$zdjecie_po_prawej = get_field('zdjecie_po_prawej');
+$opis_po_prawej = get_field('opis_po_prawej');
+$zdjecie_po_lewej = get_field('zdjecie_po_lewej');
+$opis_po_lewej2 = get_field('opis_po_lewej2');
+$zdjecie_po_prawej2 = get_field('zdjecie_po_prawej2');
+$opis_po_prawej2 = get_field('opis_po_prawej2');
+$zdjecie_po_lewej2 = get_field('zdjecie_po_lewej2');
+$opis = get_field('opis');
+?>
+
+<?php if($opis_po_lewej or $opis_po_prawej or $opis): ?>
+    <section class="description">
+        <div class="container">
+            <h3 class="header header--center header--mb-m accordion active">Opis</h3>
+
+            <div class="panel" style="max-height: 2000px;">
+                <?php if($opis_po_lewej): ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="description__content">
+                                <?php echo get_field('opis_po_lewej'); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="<?php echo get_field('zdjecie_po_prawej')['url']?>" data-fslightbox="dsc">
+                                <img class="description__photo" src="<?php echo get_field('zdjecie_po_prawej')['url']?>">
+                            </a>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if($opis_po_prawej): ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="<?php echo get_field('zdjecie_po_lewej')['url']?>" data-fslightbox="dsc">
+                                <img class="description__photo" src="<?php echo get_field('zdjecie_po_lewej')['url']?>">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="description__content">
+                                <?php echo get_field('opis_po_prawej'); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if($opis_po_lewej2): ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="description__content">
+                                <?php echo get_field('opis_po_lewej2'); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="<?php echo get_field('zdjecie_po_prawej2')['url']?>" data-fslightbox="dsc">
+                                <img class="description__photo" src="<?php echo get_field('zdjecie_po_prawej2')['url']?>">
+                            </a>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if($opis_po_prawej2): ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="<?php echo get_field('zdjecie_po_lewej2')['url']?>" data-fslightbox="dsc">
+                                <img class="description__photo" src="<?php echo get_field('zdjecie_po_lewej2')['url']?>">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="description__content">
+                                <?php echo get_field('opis_po_prawej2'); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if($opis): ?>
+                    <div class="row">
+                        <div class="col">
+                            <div class="description__one-line">
+                                <?php echo $opis ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+<?php endif ?>
+
+<?php
     $acf_group_id = 'group_60b65452cca03';
     $acf_fields = acf_get_fields($acf_group_id);
 ?>
@@ -190,7 +282,7 @@
                     foreach($acf_fields as $acf_field) {
                         $field_name = $acf_fields[$count]["name"];
 
-                        //create a dynanic variable and grab the value of the field
+                        //create a dynamic variable and grab the value of the field
                         $field_value = get_field($field_name);
 
                         if ($field_value) { ?>
@@ -299,60 +391,6 @@
     </div>
 </section>
 <?php } ?>
-
-<?php
-  $opis_po_lewej = get_field('opis_po_lewej');
-  $zdjecie_po_prawej = get_field('zdjecie_po_prawej');
-  $opis_po_prawej = get_field('opis_po_prawej');
-  $zdjecie_po_lewej = get_field('zdjecie_po_lewej');
-  $opis = get_field('opis');
-?>
-
-<?php if($opis_po_lewej or $opis_po_prawej or $opis): ?>
-<section class="section description">
-    <div class="container">
-        <h3 class="header header--center header--mb-m accordion active">Opis</h3>
-
-        <div class="panel" style="max-height: 2000px;">
-            <?php if($opis_po_lewej): ?>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="description__content">
-                        <?php echo get_field('opis_po_lewej'); ?>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="description__photo" src="<?php echo get_field('zdjecie_po_prawej')['url']?>">
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <?php if($opis_po_prawej): ?>
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="description__photo" src="<?php echo get_field('zdjecie_po_lewej')['url']?>">
-                </div>
-                <div class="col-md-6">
-                    <div class="description__content">
-                        <?php echo get_field('opis_po_prawej'); ?>
-                    </div>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <?php if($opis): ?>
-            <div class="row">
-                <div class="col">
-                    <div class="description__one-line">
-                        <?php echo $opis ?>
-                    </div>
-                </div>
-            </div>
-            <?php endif; ?>
-        </div>
-    </div>
-</section>
-<?php endif ?>
 
 <?php
     $realizacja1 = get_field('realizacja_1');

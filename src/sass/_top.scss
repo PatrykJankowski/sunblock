@@ -4,6 +4,7 @@
   background: #000;
 
   &__video {
+    display: none;
     width: 100%;
     min-height: 600px;
     max-height: 1000px;
@@ -12,6 +13,15 @@
 
     @include for-size(tablet) {
       min-height: 900px;
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+
+      @include for-size(tablet) {
+        display: none;
+      }
     }
   }
 

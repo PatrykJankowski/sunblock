@@ -1,3 +1,5 @@
+<?php /* Template Name: Kontakt */ ?>
+
 <?php get_header(); ?>
 
 <div class="subpage-top__wrapper">
@@ -7,13 +9,16 @@
     </section>
 </div>
 
-<section class="section page-white">
+<section class="section contact-page">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                 <div>
                     <?php the_content(); ?>
                 </div>
+            </div>
+            <div class="col-md-6">
+                <?php echo do_shortcode('[contact-form-7 id="241" title="Formularz kontaktowy"]'); ?>
             </div>
         </div>
     </div>

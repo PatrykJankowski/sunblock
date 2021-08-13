@@ -7,7 +7,7 @@
                 <div class="top__content">
                     <h1>Światło czy cień?</h1>
                     <p class="subheader">Systemy zaciemnienia skrojone na miarę</p>
-                    <a href="/katalog" class="button">Obejrzyj katalog</a>
+                    <a href="/katalog" class="button">Zobacz ofertę</a>
                 </div>
             </div>
         </div>
@@ -15,6 +15,10 @@
 
     <video autoplay muted loop class="top__video">
         <source src="wp-content/themes/sunblock/img/video.webm" type="video/webm">
+    </video>
+
+    <video autoplay muted loop class="top__video top__video--mobile">
+        <source src="wp-content/themes/sunblock/img/video_m.mov" type="video/mp4">
     </video>
 </section>
 
@@ -149,7 +153,7 @@
                 <ul class="hp-small-list__wrapper">
                     <li class="hp-small-list">
                         <img src="wp-content/themes/sunblock/img/miarki.svg">
-                        Prezentujemy katalog produktów oraz próbki materialów
+                        Prezentujemy katalog produktów oraz próbki materiałów
                     </li>
                     <li class="hp-small-list">
                         <img src="wp-content/themes/sunblock/img/narzedzia.svg">

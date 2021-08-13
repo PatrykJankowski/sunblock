@@ -32,19 +32,21 @@
 </section>
 
 <?php
-// the query
-$the_query = new WP_Query( array(
-    'category_name' => 'aktualnosci',
-    'posts_per_page' => 2,
-    'post__not_in' => array($id),
-));
+    $url = $_SERVER["REQUEST_URI"];
+    $isProject = strpos($url, '/realizacje');
+
+    $the_query = new WP_Query( array(
+        'category_name' => ($isProject !== false ? 'realizacje' : 'aktualnosci'),
+        'posts_per_page' => 2,
+        'post__not_in' => array($id),
+    ));
 ?>
 
 <section class="section">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="header--mb-m">Zobacz inne aktualności:</h3>
+                <h3 class="header--mb-m"><?php if ($isProject !== false): ?>Zobacz inne realizacje:<?php else:?>Zobacz inne aktualności:<?php endif;?></h3>
             </div>
         </div>
 
